@@ -23,7 +23,7 @@ before_action :find_room, only: [:edit,:show,:update,:destroy]
   def update
     if @room.update(room_params)
       flash[:notice] = 'Room was successfully updated'
-      redirect_to root_path
+      redirect_to rooms_path
     else
       render edit
     end
