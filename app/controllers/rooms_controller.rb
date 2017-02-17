@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :find_room, only: [:edit,:update]
+before_action :find_room, only: [:edit,:show,:update,:destroy]
   def index
     @rooms = Room.all
   end
@@ -44,6 +44,5 @@ class RoomsController < ApplicationController
     def find_room
       @room = Room.find(params[:id])
     end
-
 
 end
